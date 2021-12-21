@@ -1,0 +1,15 @@
+version: '3'
+services:
+    api:
+        build: .
+        ports:
+            - '4000:4000'
+        env_file:
+            - .env
+        volumes:
+            - '.:/api'
+            - 'node_modules:/api/node_modules'
+        command: sh -c "npm run dev"
+        restart: always
+volumes:
+    node_modules:
