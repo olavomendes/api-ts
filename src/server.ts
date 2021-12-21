@@ -2,6 +2,8 @@ import express, { Request, Response, NextFunction } from "express";
 import "express-async-errors";
 import "reflect-metadata";
 import { router } from "./routes";
+import swaggerjson from "./swagger";
+import SwaggerUI = require("swagger-ui-express");
 
 import "./database";
 
@@ -21,5 +23,7 @@ app.use(
     });
   }
 );
+app.use("/api/docs", SwaggerUI.serve, SwaggerUI.setup(swaggerjson));
 
-app.listen(3000, () => console.log("Servidor iniciado!"));
+const port = process.env.APP_PORT;
+app.listen(port, () => console.log(`Servidor iniciado em "localhost:${port}"`));
