@@ -36,11 +36,5 @@ $ docker-compose down -v
 
 7. A documentação do projeto pode ser encontrada na url `http://localhost:4000/api/docs/`
 
-8. Para executar os testes, utilize:
-
-```bash
-$ npm test
-```
-
-9. Caso ocorra algum problema na execução do projeto, é recomendado encerrar o container, utilizando o comando
+8. Caso ocorra algum problema na execução do projeto, é recomendado encerrar o container, utilizando o comando
    do **passo 6**, e seguir os passos novamente a partir do **passo 3**.
