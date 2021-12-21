@@ -6,6 +6,9 @@ import TagDefinition from './docs/tag/definition';
 import CreateTag from './docs/tag/createTag';
 import ListTags from './docs/tag/listTags';
 
+import ComplimentDefinition from './docs/compliment/definition';
+import CreateCompliment from './docs/compliment/createCompliment';
+
 const swagger = {
     swagger: '2.0',
     info: {
@@ -27,10 +30,14 @@ const swagger = {
             post: CreateTag.createTag,
             get: ListTags.listTags,
         },
+        '/compliments': {
+            post: CreateCompliment.createCompliment,
+        },
     },
     definitions: {
         User: UserDefinition.User,
         Tag: TagDefinition.Tag,
+        Compliment: ComplimentDefinition.Compliment,
     },
 };
 
